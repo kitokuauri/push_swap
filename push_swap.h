@@ -6,7 +6,7 @@
 /*   By: aursuare <aursuare@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 14:08:18 by aursuare          #+#    #+#             */
-/*   Updated: 2025/01/09 17:37:08 by aursuare         ###   ########.fr       */
+/*   Updated: 2025/01/09 18:04:48 by aursuare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,24 @@
 # include <unistd.h>
 # include <limits.h>
 
+typedef struct s_stack
+{
+	int				value;
+	int				index;
+	int				pos;
+	int				target;
+	int				cost_a;
+	int				cost_b;
+	struct s_stack	*next;
+}	t_stack;
+
 void		get_num(char *argv, t_sack **stack_a);
 int			is_sorted(t_stack *stack);
+t_stack		*stack_new(int value);
+void		stack_add(t_stack **stack, t_stack *new);
+t_stack		*get_bottom(t_stack *stack);
+t_stack		*before_bottom(t_stack *stack);
+int			get_stack_size(t_stack *stack);
 
 void		pa(t_stack **stack_a, t_stack **stack_b);
 void		pb(t_stack **stack_a, t_stack **stack_b);
