@@ -14,9 +14,9 @@
 
 int	is_sorted(t_stack *stack)
 {
-	while (stack->next !NULL)
+	while (stack->next != NULL)
 	{
-		if (stack->value > tack->next->value)
+		if (stack->value > stack->next->value)
 			return (0);
 		stack = stack->next;
 	}
@@ -47,7 +47,7 @@ void	get_num(char *argv, t_stack **stack_a)
 		{
 			n = ft_atoi(param[i]);
 			if (n > INT_MAX || n < INT_MIN)
-				ir_error(stack_a, NULL);
+				is_error(stack_a, NULL);
 			stack_add(stack_a, stack_new(n));
 		}
 		else
@@ -73,7 +73,7 @@ int	main(int argc, char *argv[])
 		get_num(argv[i], &stack_a);
 		i++;
 	}
-	if (is_duplicate(stack_a))
+	if (is_dup(stack_a))
 		is_error(&stack_a, NULL);
 	stack_size = get_stack_size(stack_a);
 	get_index(stack_a, stack_size + 1);
