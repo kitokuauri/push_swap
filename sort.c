@@ -6,7 +6,7 @@
 /*   By: aursuare <aursuare@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 17:44:19 by aursuare          #+#    #+#             */
-/*   Updated: 2025/01/09 18:00:42 by aursuare         ###   ########.fr       */
+/*   Updated: 2025/01/16 12:54:02 by aursuare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void    sort(t_stack **stack_a, t_stack **stack_b)
     sort_three(stack_a);
     while (*stack_b)
     {
-        get_target_position(stack_a, stack_b);
+        get_target_pos(stack_a, stack_b);
         cost(stack_a, stack_b);
         cheapest_move(stack_a, stack_b);
     }

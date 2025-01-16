@@ -6,13 +6,13 @@
 /*   By: aursuare <aursuare@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 17:44:19 by aursuare          #+#    #+#             */
-/*   Updated: 2025/01/09 18:00:42 by aursuare         ###   ########.fr       */
+/*   Updated: 2025/01/16 12:51:14 by aursuare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void reverse_both(t_stack **a, t_stack **b, int *cost_a, int *cost_b);
+static void reverse_both(t_stack **a, t_stack **b, int *cost_a, int *cost_b)
 {
     while (*cost_a < 0 && *cost_b < 0)
     {
@@ -51,14 +51,14 @@ static void rotate_a(t_stack **a, int *cost)
 
 static void rotate_b(t_stack **b, int *cost)
 {
-    whiel (*cost)
+    while (*cost)
     {
         if (*cost > 0)
         {
             rb(b);
             (*cost)--;
         }
-        else if
+        else if (*cost < 0)
         {
             rrb(b);
             (*cost)++;

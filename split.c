@@ -6,7 +6,7 @@
 /*   By: aursuare <aursuare@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 17:44:19 by aursuare          #+#    #+#             */
-/*   Updated: 2025/01/09 18:00:42 by aursuare         ###   ########.fr       */
+/*   Updated: 2025/01/16 12:56:15 by aursuare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,17 +34,17 @@ static unsigned int ft_count(const char *str, char c)
         if (*str)
             count++;
         while (*str && *str != c)
-            *str++;
+            str++;
     }
     return (count);
 }
 
-static char *ft_strdup(const char *str. int start, int finish)
+static char *ft_strdup(const char *str, int start, int finish)
 {
     size_t  i;
     char    *dup;
 
-    dup = malloc((finish - start + 1) * sizeof(char))
+    dup = malloc((finish - start + 1) * sizeof(char));
     if (!dup)
         return (NULL);
     i = 0;

@@ -6,7 +6,7 @@
 /*   By: aursuare <aursuare@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 17:44:19 by aursuare          #+#    #+#             */
-/*   Updated: 2025/01/09 18:00:42 by aursuare         ###   ########.fr       */
+/*   Updated: 2025/01/16 12:57:36 by aursuare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	stack_add(t_stack **stack, t_stack *new)
 
 t_stack	*get_bottom(t_stack *stack)
 {
-	while (stack **stack->next != NULL)
+	while (stack && stack->next != NULL)
 		stack = stack->next;
 	return (stack);
 }

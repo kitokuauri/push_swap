@@ -6,7 +6,7 @@
 /*   By: aursuare <aursuare@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 16:18:18 by aursuare          #+#    #+#             */
-/*   Updated: 2025/01/09 17:37:43 by aursuare         ###   ########.fr       */
+/*   Updated: 2025/01/16 12:47:18 by aursuare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	get_num(char *argv, t_stack **stack_a)
 
 	param = ft_split(argv, ' ');
 	i = 0;
-	while (param[i] != '0')
+	while (param[i] != NULL)
 	{
 		if (input_is_correct(param[i]))
 		{

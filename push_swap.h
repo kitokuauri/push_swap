@@ -6,7 +6,7 @@
 /*   By: aursuare <aursuare@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 14:08:18 by aursuare          #+#    #+#             */
-/*   Updated: 2025/01/09 18:04:48 by aursuare         ###   ########.fr       */
+/*   Updated: 2025/01/16 12:49:30 by aursuare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ void		sa(t_stack **stack_a);
 void		sb(t_stack **stack_b);
 void		ss(t_stack **stack_a, t_stack **stack_b);
 void		rrb(t_stack **stack_b);
+void		rra(t_stack **stack_a);
 void		rrr(t_stack **stack_a, t_stack **stack_b);
 void		ra(t_stack **stack_a);
 void		rb(t_stack **stack_b);

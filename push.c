@@ -6,13 +6,13 @@
 /*   By: aursuare <aursuare@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 16:55:16 by aursuare          #+#    #+#             */
-/*   Updated: 2025/01/09 17:26:37 by aursuare         ###   ########.fr       */
+/*   Updated: 2025/01/16 12:52:47 by aursuare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	push(t_stack **src, t_stck **dst)
+static void	push(t_stack **src, t_stack **dst)
 {
 	t_stack	*tmp;
 

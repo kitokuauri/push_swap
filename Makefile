@@ -6,14 +6,13 @@
 #    By: aursuare <aursuare@student.42barcelon      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/09 14:08:35 by aursuare          #+#    #+#              #
-#    Updated: 2025/01/09 14:08:36 by aursuare         ###   ########.fr        #
+#    Updated: 2025/01/16 13:05:54 by aursuare         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 CC = cc
 CFLAGS = -Wall -Werror -Wextra
-RM = rm -f
 
 SRC = main.c \
 				cost.c				\
@@ -31,22 +30,20 @@ SRC = main.c \
 				utils.c
 
 OBJ = ${SRC:.c=.o}
-INCLUDE = ./push_swap.h
 
 %.o: %.c
-		${CC} ${CFLAGS} -c $< -o $@
+		$(CC) $(CFLAGS) -c $< -o $@
 
-all: ${NAME}
+all: $(NAME)
 
-${NAME}: ${OBJ} ${INCLUDE}
-	${CC} ${CFLAGS} ${SRC} -o ${NAME}
+$(NAME): $(OBJ) push_swap.h Makefile
+	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
 
 clean:
-		${RM} ${OBJ}
+		rm -f $(OBJ)
 
-fclean:
-		clean
-		${RM} ${NAME}
+fclean: clean
+		rm -f $(NAME)
 
 re:	fclean all
 

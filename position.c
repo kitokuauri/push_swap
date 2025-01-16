@@ -6,7 +6,7 @@
 /*   By: aursuare <aursuare@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 17:44:19 by aursuare          #+#    #+#             */
-/*   Updated: 2025/01/09 18:00:42 by aursuare         ###   ########.fr       */
+/*   Updated: 2025/01/16 12:52:25 by aursuare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,14 @@ static void get_position(t_stack **stack)
     }
 }
 
-static int  get_target(t_stack **stack_a, int indez_b, int target_i, int target)
+static int  get_target(t_stack **stack_a, int index_b, int target_i, int target)
 {
     t_stack *tmp;
 
     tmp = *stack_a;
     while (tmp)
     {
-        if (tmp->indez > index_b && tmp->index < target_i)
+        if (tmp->index > index_b && tmp->index < target_i)
         {
             target_i = tmp->index;
             target = tmp->pos;
